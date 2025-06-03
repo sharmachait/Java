@@ -1,0 +1,240 @@
+{
+  "main": {
+    "id": "e3758826e94225d7",
+    "type": "split",
+    "children": [
+      {
+        "id": "9b8e46ba0e70fd55",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "99cee61b4fefa236",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Saga + Clean + DDD +CQRS/Saga.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Saga"
+            }
+          },
+          {
+            "id": "3af5caffe00cbe3d",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "project-overview-section-1.png"
+              },
+              "icon": "lucide-image",
+              "title": "project-overview-section-1"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9731dc72d30fd510",
+    "type": "split",
+    "children": [
+      {
+        "id": "05748254999cca78",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8e174e12d85b25c3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "36950ecd81922d7a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "69521bad177eaceb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "3419dc621afb2b10",
+    "type": "split",
+    "children": [
+      {
+        "id": "51c0eeb3fe76a89a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6b582fd797af3a49",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "kubernetes/01.03 Jobs and CronJobs.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 01.03 Jobs and CronJobs"
+            }
+          },
+          {
+            "id": "ccac76c8ba527a29",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "kubernetes/04. Secrets, Configmaps and volumes.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 04. Secrets, Configmaps and volumes"
+            }
+          },
+          {
+            "id": "4937adfe4c8824ed",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1ac1498136850f0f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "kubernetes/17. Helm.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 17. Helm"
+            }
+          },
+          {
+            "id": "8727608e943815f6",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "3af5caffe00cbe3d",
+  "lastOpenFiles": [
+    "referral/ask.md",
+    "interviews/Non Tech questions.md",
+    "Saga + Clean + DDD +CQRS/Saga.md",
+    "interviews/leadership principles.md",
+    "Saga + Clean + DDD +CQRS/Kafka.md",
+    "interviews/Resume Prep.md",
+    "System Design/Bitly.md",
+    "interviews/Round 3.md",
+    "Pasted image 20250601211923.png",
+    "Pasted image 20250601211834.png",
+    "publicis sapient.md",
+    "Pasted image 20250531214042.png",
+    "Untitled.md",
+    "Spring/23. OpenApi docs in rest api.md",
+    "Pasted image 20250531214109.png",
+    "Pasted image 20250531214049.png",
+    "Spring/09 csrf.md",
+    "Spring/07 spring security.md",
+    "Pasted image 20250526104103.png",
+    "System Design",
+    "01. Java for DSA.md",
+    "kubernetes/02. Services and ingress.md",
+    "kubernetes/02.01 Network policies.md",
+    "kubernetes/01.02 Deployments strategies.md",
+    "kubernetes/08. Imperative commands.md",
+    "Spring/12 Spring data JPA-hibernate.md",
+    "JUnit and Mockito/06. Testing JPA entities.md",
+    "Spring/06 Hibernate bean data validation.md",
+    "Spring/10. H2 database and JDBC.md",
+    "kubernetes/01. Pods and Deployments.md",
+    "Spring/13. Entity relationships.md",
+    "Spring/13.2 Minimum requirement to create relationships.md",
+    "Spring/13.1 JPA inheritance.md",
+    "Pasted image 20250514091823.png",
+    "Pasted image 20250514082520.png",
+    "Pasted image 20240718102454.png",
+    "referral",
+    "image.png",
+    "interviews",
+    "postgresql",
+    "Spring/Untitled",
+    "kubernetes/The Book of Kubernetes - Alan Hohn.pdf",
+    "kubernetes/ckad mock exams",
+    "Spring-Websockets",
+    "Saga + Clean + DDD +CQRS",
+    "kubernetes"
+  ]
+}

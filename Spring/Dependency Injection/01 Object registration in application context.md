@@ -20,7 +20,7 @@ public class AppConfig {
 ```java
 import beans.Vehicle;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-7
+
 public class Main {
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(AppConfig.class);

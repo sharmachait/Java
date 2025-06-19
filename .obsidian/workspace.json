@@ -4,37 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "9b8e46ba0e70fd55",
+        "id": "6acc05c8f69bdb2f",
         "type": "tabs",
         "children": [
           {
-            "id": "99cee61b4fefa236",
+            "id": "9f04d696f5d6b0d4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Saga + Clean + DDD +CQRS/Saga.md",
+                "file": "Spring/02 Functional interfaces.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Saga"
-            }
-          },
-          {
-            "id": "3af5caffe00cbe3d",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "project-overview-section-1.png"
-              },
-              "icon": "lucide-image",
-              "title": "project-overview-section-1"
+              "title": "02 Functional interfaces"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -188,46 +175,46 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3af5caffe00cbe3d",
+  "active": "8e174e12d85b25c3",
   "lastOpenFiles": [
+    "concurrency/03. Thread pool, CompletableFuture.md",
+    "Spring/02 Functional interfaces.md",
+    "01. Java for DSA.md",
+    "concurrency/01.02 ConcurrentHashMap and race conditions.md",
+    "concurrency/02. Virtual threads.md",
+    "concurrency/01.01 Volatile and synchronized.md",
+    "concurrency/04. Futures.md",
+    "concurrency/01. Platform Threads.md",
+    "concurrency/001. Multitasking vs Multithreading.md",
+    "Spring/23. OpenApi docs in rest api.md",
+    "interviews/Amazon docs.md",
     "referral/ask.md",
-    "interviews/Non Tech questions.md",
-    "Saga + Clean + DDD +CQRS/Saga.md",
+    "referral/amazon ghusna.md",
     "interviews/leadership principles.md",
-    "Saga + Clean + DDD +CQRS/Kafka.md",
-    "interviews/Resume Prep.md",
-    "System Design/Bitly.md",
+    "interviews/Non Tech questions.md",
     "interviews/Round 3.md",
+    "interviews/Resume Prep.md",
+    "Pasted image 20250608230513.png",
+    "Spring/Dependency Injection/02 Stereotypical bean.md",
+    "Spring/Dependency Injection/01 Object registration in application context.md",
+    "JUnit and Mockito/01. JUnit.md",
+    "Pasted image 20240718102454.png",
+    "Saga + Clean + DDD +CQRS/Kafka.md",
+    "Spring/14. Security API.md",
+    "kubernetes/000. CMD ARGs and ENTRYPOINT.md",
+    "kubernetes/01. Pods and Deployments.md",
+    "kubernetes/01.02 Deployments strategies.md",
+    "kubernetes/01.03 Jobs and CronJobs.md",
+    "project-overview-section-1.png",
     "Pasted image 20250601211923.png",
     "Pasted image 20250601211834.png",
-    "publicis sapient.md",
     "Pasted image 20250531214042.png",
-    "Untitled.md",
-    "Spring/23. OpenApi docs in rest api.md",
     "Pasted image 20250531214109.png",
     "Pasted image 20250531214049.png",
-    "Spring/09 csrf.md",
-    "Spring/07 spring security.md",
     "Pasted image 20250526104103.png",
     "System Design",
-    "01. Java for DSA.md",
-    "kubernetes/02. Services and ingress.md",
-    "kubernetes/02.01 Network policies.md",
-    "kubernetes/01.02 Deployments strategies.md",
-    "kubernetes/08. Imperative commands.md",
-    "Spring/12 Spring data JPA-hibernate.md",
-    "JUnit and Mockito/06. Testing JPA entities.md",
-    "Spring/06 Hibernate bean data validation.md",
-    "Spring/10. H2 database and JDBC.md",
-    "kubernetes/01. Pods and Deployments.md",
-    "Spring/13. Entity relationships.md",
-    "Spring/13.2 Minimum requirement to create relationships.md",
-    "Spring/13.1 JPA inheritance.md",
     "Pasted image 20250514091823.png",
-    "Pasted image 20250514082520.png",
-    "Pasted image 20240718102454.png",
     "referral",
-    "image.png",
     "interviews",
     "postgresql",
     "Spring/Untitled",

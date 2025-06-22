@@ -288,6 +288,14 @@ public interface CotactRepository extends CrudRepository<Contact,Integer>{
 	List<Contact> findByStatusAndDate(String status, String Date);
 }
 ```
+
+JPA repository derived method to check exists by
+```java
+@Repository  
+public interface PatientRepository extends JpaRepository<Patient, UUID> {  
+    boolean existsByEmail(String email);  
+}
+```
 ### introducers
 1. find
 2. read
@@ -295,6 +303,7 @@ public interface CotactRepository extends CrudRepository<Contact,Integer>{
 4. count
 5. get
 6. distinct - `findDistinctByStatus`
+7. exists
 we can use distinct to tell JPA to get distinct items in the output like `findDistinctByStatus`
 ### criteria
 any of the entity properties separated by `And` and `Or`

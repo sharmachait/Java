@@ -15,11 +15,14 @@ by default the bean with the primary annotation is injected
 # 3 giving the Autowired variable a qualifier
 best way
 ```java
-public class Person{
-	private Vehicle veh;
-	@Autowired
-	public void setVehicle(@Qualifier("vehicle1") Vehicle vehicle){
-		this.veh = vehicle;
-	}
+@Component
+public class MyService {
+	
+    private final ExampleService exampleService;
+	
+    public MyService(@Qualifier("exampleServiceBean") ExampleService exampleService) {
+        this.exampleService = exampleService;
+    }
 }
+
 ```

@@ -39,7 +39,8 @@ public class Contact {
 ### @NotEmpty - size should be greater than zero, checks not null
 ### @NotBlank - trimmed length should be greater than zero, checks not null
 
-without the @Valid annotation validations will not performed
+# without the @Valid annotation validations will not performed
+# with the @Valid annotation validations are performed recursively
 ```java
 @PostMapping  
 public ResponseEntity<ResponseDto> createAccount(@Valid @RequestBody CustomerDto customer) throws CustomerAlreadyExistsException {  
@@ -49,9 +50,9 @@ public ResponseEntity<ResponseDto> createAccount(@Valid @RequestBody CustomerDto
             .body(new ResponseDto(AccountsConstants.STATUS_201, AccountsConstants.MESSAGE_201));  
 }
 @GetMapping  
-public ResponseEntity<CustomerDto> getAccountDetails(@RequestParam  
-                                                         @Pattern(regexp="(^$|[0-9]{10})", message = "Mobile number must be 10 digits")  
-                                                         String mobileNumber){  
+public ResponseEntity<CustomerDto> getAccountDetails(
+	@RequestParam  @Pattern(regexp="(^$|[0-9]{10})", message = "Mobile number must be 10 digits")  
+	 String mobileNumber){  
     CustomerDto customerDto = accountsService.getAccount(mobileNumber);  
     return ResponseEntity  
             .status(HttpStatus.OK)  
@@ -105,3 +106,4 @@ public class Person {
     private Address address;
 }
 ```
+

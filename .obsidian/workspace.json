@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aws/networking/VPC.md",
+                "file": "Spring/spring boot/grpc/02 Protobuf.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "VPC"
+              "title": "02 Protobuf"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "validation",
+                "query": "swa",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -177,6 +177,12 @@
   },
   "active": "9f04d696f5d6b0d4",
   "lastOpenFiles": [
+    "Spring/spring boot/grpc/03 Generating stubs.md",
+    "Spring/spring boot/grpc/01 Dependencies.md",
+    "Spring/spring boot/grpc/02 Protobuf.md",
+    "Spring/spring boot/23. swagger OpenApi docs in rest api.md",
+    "Spring/spring boot/grpc",
+    "aws/networking/VPC.md",
     "aws/Pasted image 20250623182156.png",
     "aws/Pasted image 20250623182156.png.crdownload",
     "Spring/spring boot/17. interservice communication.md",
@@ -207,11 +213,7 @@
     "Java",
     "Spring/spring boot/28. Resiliency.md",
     "Spring/spring boot/01 Intro.md",
-    "Spring/spring boot/24. Docker.md",
     "Spring/spring boot",
-    "Spring/Spring-Websockets/chat app.md",
-    "Spring/Spring-Websockets/Broker.md",
-    "Saga + Clean + DDD +CQRS/Saga.md",
     "aws/Pasted image 20250620212516.png",
     "aws/networking",
     "aws/compute",
@@ -220,8 +222,6 @@
     "Pasted image 20240718102454.png",
     "project-overview-section-1.png",
     "Pasted image 20250601211923.png",
-    "Pasted image 20250601211834.png",
-    "Pasted image 20250531214042.png",
-    "System Design"
+    "Pasted image 20250601211834.png"
   ]
 }

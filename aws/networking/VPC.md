@@ -44,6 +44,5 @@ we can do that with a NAT gateway (Network Address Translation)
 the NAT gateway must be created in the public subnet
 and a route entry must be created in the public route table to point to the NAT gateway
 going from 0.0.0.0/0 to the nat gateway
-
   
 ![[Pasted image 20250623182156.png]]

@@ -26,3 +26,31 @@ public class BillingServiceGrpcClient {
      }  
 }
 ```  
+
+# other way is to use @GrpcClient
+```java
+@Service  
+public class BookAuthorClientService {  
+  
+    @GrpcClient("grpc-bookauthor-service")  
+    BookAuthorServiceGrpc.BookAuthorServiceBlockingStub blockingStub;  
+  
+    public Map<Descriptors.FieldDescriptor, Object> getAuthor(int authorId){  
+        Author request = Author.newBuilder().setAuthorId(authorId).build();  
+        Author response = blockingStub.getAuthor(request);  
+        return response.getAllFields();  
+    }  
+}
+```
+
+but for this to work we need the properties in the application.yml like so
+
+```yml
+grpc:
+  client:
+    grpc-bookauthor-service:
+      address: localhost:9000
+      negotiation-type: plaintext
+```
+
+# for server streaming we can not use a blocking stub we need an asynchronous client for it

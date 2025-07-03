@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/spring boot/grpc/04 GRPC client.md",
+                "file": "Spring/spring boot/grpc/05 interceptors.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04 GRPC client"
+              "title": "05 interceptors"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "swa",
+                "query": "kafka",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -175,11 +175,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8e174e12d85b25c3",
+  "active": "9f04d696f5d6b0d4",
   "lastOpenFiles": [
+    "Saga + Clean + DDD +CQRS/Kafka.md",
+    "Spring/spring boot/grpc/05 interceptors.md",
+    "Spring/spring boot/grpc/04 GRPC client.md",
     "Spring/spring boot/grpc/03 GRPC server.md",
     "Spring/spring boot/grpc/01 Dependencies.md",
-    "Spring/spring boot/grpc/04 GRPC client.md",
     "Spring/spring boot/grpc/02 Protobuf.md",
     "Spring/spring boot/23. swagger OpenApi docs in rest api.md",
     "Spring/spring boot/grpc",
@@ -210,9 +212,7 @@
     "concurrency/04. ExecutorService.md",
     "Pasted image 20240908131318.png",
     "Java/02 Functional interfaces.md",
-    "Java/01. Java for DSA.md",
     "Java",
-    "Spring/spring boot/28. Resiliency.md",
     "Spring/spring boot",
     "aws/Pasted image 20250620212516.png",
     "aws/networking",

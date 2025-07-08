@@ -1,4 +1,4 @@
-used when we want to run some code before and after a function is called, like logging.
+#### used when we want to run some code before and after a function is called, like logging.
 we are basically trying to intercept function calls before after around or after returning or after throwing
 essentially function level middlewares
 
@@ -20,7 +20,7 @@ bean with the Pointcut method defined in it, the bean whose methods are being in
 
 # Mechanism of AOP
 the AOP framework achieves this intercepting behaviour using proxy objects with wrapper methods that wrap the method we defined in the aspects
-Spring, instead of giving us a reference to the Bean we defined gives us the reference to the Porxy object instead
+Spring, instead of giving us a reference to the Bean we defined gives us the reference to the Proxy object instead
 This process is called weaving
 
 # Advices
@@ -89,6 +89,8 @@ public class LoggerAspect{
 }
 ```
 
+Args is another type of point cut used to match methods we certain arguments
+
 if we have multiple aspects for the same method their execution order is random
 but we can specify the order
 ```java
@@ -98,7 +100,6 @@ but we can specify the order
 public class LoggerAspect{
 	@Around("execution(* com.beans.*.*(..))")
 	public void log(ProceedingJoinPoint JP) throws Thorwable{
-
 	}
 }
 ```
@@ -132,7 +133,7 @@ public class LoggerAspect{
 @Aspect
 @Component
 public class LoggerAspect {
-	@Around("execution(* com.sharmachait.wazir..*.*(..))")
+	@Around("execution(* com.sharmachait.wazir..*(..))")
 	public Object log(ProceedingJoinPoint jp) throws throwable {
 		log.info(jp.getSignature().toString() + " method execution start");
 		Instant st = Instant.now();
@@ -147,10 +148,53 @@ public class LoggerAspect {
 		return returnObj;
 	}
 	
-	@AfterThrowing(value = "execution(* com.sharmachait.wazir..*.*(..))")
+	@AfterThrowing(value = "execution(* com.sharmachait.wazir..*(..))")
 	public void logException(JoinPoint jp, Exception e){
 		log.error(jp.getSignature() + " an exception happened due to " + e.getMessage());
 	}
 	
 }
 ```
+
+another type of point cut is within instead of execution, simpler to use this when we wan to intercept all methods within a package
+
+```java
+@Aspect
+@Component
+public class LoggerAspect{
+	@Around("within(com.beans..*") // any class within com.beans package
+	public void log(ProceedingJoinPoint JP) throws Thorwable{
+		//before logic
+		JP.proceed();
+		JP.getSignature().toString();
+		//after logic
+	}
+	@Around("within(com.beans.Store") // only for the Store class in the beans package
+	public void log(ProceedingJoinPoint JP) throws Thorwable{
+		//before logic
+		JP.proceed();
+		JP.getSignature().toString();
+		//after logic
+	}
+}
+```
+
+to be able to run an Aspect for any class that has a particular annotation we can match that in the point cut as well
+for example to run for any service class
+
+```java
+@Aspect
+@Component
+public class LoggerAspect{
+	@Around("@within(org.springframework.stereotype.Service")
+	public void log(ProceedingJoinPoint JP) throws Thorwable{
+		//before logic
+		JP.proceed();
+		JP.getSignature().toString();
+		//after logic
+	}
+}
+```
+
+
+

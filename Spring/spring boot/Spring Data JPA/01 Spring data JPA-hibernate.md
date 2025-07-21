@@ -1,4 +1,7 @@
-# hibernate required a no args constructor to work properly with entities
+## Setup
+1. dependency
+2. application.properties with data source and dialect
+# hibernate requires a no args constructor to work properly with entities
 
 JDBC still requires alot of boiler plate like with row mapper and  and passing all the parameters into the query and making prepared statements
 
@@ -22,21 +25,23 @@ just like MongoRepository
 this project implements all these interfaces using hibernate
 
 1. to be able to use the repository of a model we need to define that model as an @Entity, and annotations like @Table and @Column,
+## to make JPA ignore a property when reading from database
+use `@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)` over the field
 ##### JPA will try to match by removing the underscore as well
-use table if pojo and table name are not same same for colmun
+use table if pojo and table name are not same, same for column
+### Id with custom column and table name
 ```java
 
 @Entity
 @Table(name="contact_msg")
 public class Contact extends BaseEntity{
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO, generator="native")
-	@GenericGenerator(name="native", strategy="native")
+	@GeneratedValue(strategy = GenerationType.Identity)
 	@Column(name = "contact_id")
-	private int contactId;
+	private Long contactId;
 }
 ```
-2. how to make base entity columns part of model as well, use the annotation @MappedSuperClass
+### how to make base entity columns part of model as well, use the annotation @MappedSuperClass
 ```java
 @Data
 @MappedSuperclass
@@ -47,15 +52,15 @@ public class BaseEntity{
 	private String updatedBy;
 }
 ```
-2. Create an interface for the Model by extending one of the Repository interfaces
+### Create an interface for the Model by extending one of the Repository interfaces
 ```java
 @Repository
-public interface CotactRepository extends CrudRepository<Contact,Integer>{
+public interface CotactRepository extends JpaRepository<Contact,Long>{
 
 }
 ```
 
-3. enable JPA by telling the springboot application where to find the interface and where to find the models
+### enable JPA by telling the springboot application where to find the interface and where to find the models
 ```java
 @SpringBootApplication
 @EnableJpaRepositories("com.sharmachait.wazir.repository")
@@ -64,8 +69,9 @@ public class Wazir {
  
 }
 ```
+not required if the entities and repositories are in a sub package of the main class with @SpringBootApplication
 
-4. to convert enum to String
+### to convert enum to String
 ```java
 @Data
 @Entity
@@ -102,22 +108,7 @@ public class ContactService {
 }
 ```
 
-5. to create a repository with all the default methods
-```java
-@Repository
-public interface HolidaysRepository extends CrudRepository<Holiday, String>{
-
-}
-```
-
-but all the methods like findAll return an iterable instead of a list
-to convert an iterable into a list
-```java
-Iterable<Holiday> i = holidayRepository.findAll();
-List<Holidays> l = StreamSupport.stream(i.spliterator(), false).collect(Collectors.toList());
-```
-
-6. updating an entry in the data base requires us to fetch it first make changes and save again
+#### updating an entry in the data base requires us to fetch it first make changes and save again
 the find methods return an Optional instead of the object
 ```java
 public boolean updateMsg(int contactId, String updatedBy){
@@ -138,7 +129,7 @@ public boolean updateMsg(int contactId, String updatedBy){
 }
 ```
 
-7.  how to fetch data with custom logic? based on some random fields that are not ids, we need to use ==**Derived query methods**==
+#### how to fetch data with custom logic? based on some random fields that are not ids, we need to use ==**Derived query methods**==
 we just need to define query methods in our interface, and JPA will automatically create implementations that fetches data from the database based on those parameters
 ```java
 List<Person> findByLastName(String lastName);
@@ -161,123 +152,6 @@ spring.datasource.username=admin
 apring.datasource.password=somepassword
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
-```
-
-## Data base transaction isolation levels
-1. Repeatable read - 
-	- Your transaction receives a consistent view of the database at the time the first read operation occurs
-	- This view remains consistent throughout your transaction, even if other transactions commit changes
-	- Your transaction effectively works with a snapshot of the data taken at the start of the transaction
-2. Read Committed -  all the reads in our transaction will receive a fresh snapshot of the data
-3. Read Uncommitted - Reads are not consistent, but may avoid additional database locks
-4. serializable - Similar to Repeatable Read, but may lock the selected rows
-### lost updates dues to the snapshot view can be handled with DB locks 
-In the Spring Data JPA example, several different types of locks are being used. Let's break down each type and their differences
-## 1. Optimistic Locking
-
-```sql
-ALTER TABLE your_table_name 
-ADD COLUMN "version" INTEGER NOT NULL DEFAULT 0;
-```
-**Implementation:** Uses a `@Version` field in the entity class.
-
-```java
-@Entity 
-public class Employee {     
-	// other fields         
-	@Version    
-	private Long version; 
-}
-```
-
-**How it works:**
-- Doesn't acquire actual database locks
-- When an entity is loaded, JPA tracks its version
-- On save/update, JPA verifies the version hasn't changed
-- If version has changed, it throws `OptimisticLockingFailureException`
-**Best for:** High-concurrency, low-conflict scenarios where most concurrent operations don't modify the same records.
-
-we also need to use the lock annotation for custom queries
-```java
-@Lock(LockModeType.OPTIMISTIC) 
-Optional<Product> findByName(Long id);
-```
-###### downsides
-if any update outside of hibernate omit updating version we may have consistency issues
-## 2. Pessimistic Locks
-uses database native mechanisms to lock the records
-```sql
-BEGIN;
-SELECT * FROM accounts WHERE id = 123 FOR UPDATE;
--- Process data and make changes
--- Other transactions that try to acquire a lock on this row will wait
-UPDATE accounts SET balance = balance - 100 WHERE id = 123;
-COMMIT;
-```
-types of pessimistic locks supported by JPA
-1. PESSIMISTIC_READ - shared lock prevents data from being updated
-```java
-@Lock(LockModeType.PESSIMISTIC_READ) 
-Optional<Employee> findByIdWithPessimisticReadLock(Long id);
-
-@Override
-@Lock(LockModeType.PESSIMISTIC_READ) 
-Optional<Employee> findById(Long id);
-```
-1. PESSIMISTIC_WRITE - exclusive lock, prevents data from even being read 
-```java
-@Lock(LockModeType.PESSIMISTIC_WRITE) 
-Optional<Employee> findByIdWithPessimisticWriteLock(Long id);
-```
-3. PESSIMISTIC_FORCE_INCREMENT - use only if we have a version property in our entity
-
-```java
-public interface EmployeeRepository extends JpaRepository<Employee, Long> {
-    // For optimistic locking - find methods with default optimistic locking
-    Optional<Employee> findById(Long id);
-    
-    // For pessimistic locking - explicit methods with lock modes
-    @Lock(LockModeType.PESSIMISTIC_WRITE)
-    @QueryHints({@QueryHint(name = "javax.persistence.lock.timeout", value = "3000")})
-    Optional<Employee> findByIdWithPessimisticWriteLock(Long id);
-    
-    @Lock(LockModeType.PESSIMISTIC_READ)
-    Optional<Employee> findByIdWithPessimisticReadLock(Long id);
-}
-```
-`@QueryHints({@QueryHint(name = "javax.persistence.lock.timeout", value = "3000")})` specifies that when executing a database query with this annotation:
-1. The lock timeout is set to 3000 milliseconds (3 seconds)
-2. If the query attempts to access data that's locked by another transaction, it will wait up to 3 seconds before giving up and throwing an exception
-3. Pessimistic locks require an active transaction to work properly
-4. The lock must be maintained throughout your business logic until the transaction commits
-Here's why this is important:
-- Pessimistic locks are held within the scope of a transaction
-- Without `@Transactional` on your service method, the lock would be acquired and released immediately after the repository method completes
-- **When a non-transactional method (e.g., createOrder()) calls a transactional method (e.g., persistOrder()) within the same class, the call bypasses the proxy and goes directly to the target object. This skips transactional behavior because the proxy isn't involved. Which is why it is good practice to make transaction methods in different classes.**
-- this limitation can be by passed with AspectJ bean configuration
-- Transactional methods can not be private
-- Any subsequent operations would not be protected by the lock
-
-```java
-@Service
-public class ItemService {
-    private final ItemRepository itemRepository;
-    @Autowired
-    public ItemService(ItemRepository itemRepository) {
-        this.itemRepository = itemRepository;
-    }
-    @Transactional // This is necessary
-    public Item updateItem(Long id) {
-        Item item = itemRepository.findByIdWithLock(id);
-        item.setQuantity(item.getQuantity() - 1);
-        return itemRepository.save(item);
-    }
-}
-public interface ItemRepository extends JpaRepository<Item, Long> {    
-    @Lock(LockModeType.PESSIMISTIC_WRITE)
-    @Query("SELECT i FROM Item i WHERE i.id = :id")
-    Item findByIdWithLock(@Param("id") Long id);
-}
 ```
 ## derived query methods 
 the method names are made up of introducer and criteria and the two sections are divided by "By"

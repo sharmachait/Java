@@ -6,5 +6,7 @@
   "obsidian-prism-theme@@highlight-text-accent-dt": "pt-highlight-text-light-dt",
   "Appearance-dark@@card-layout-open-dark": true,
   "Appearance-dark@@theme-dark-style-select": "theme-dark-background-darker",
-  "mado-miniflow@@theme-color": "theme-tea-teal"
+  "mado-miniflow@@theme-color": "theme-tea-teal",
+  "anuppuccin-theme-settings@@anuppuccin-theme-light": "ctp-rosepine-light",
+  "anuppuccin-theme-settings@@anuppuccin-theme-accents": "ctp-accent-flamingo"
 }

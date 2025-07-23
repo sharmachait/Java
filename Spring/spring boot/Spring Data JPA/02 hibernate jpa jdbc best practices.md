@@ -174,7 +174,7 @@ public class BookRepositoryTest {}
 2. **create-only** - Creates database schema
 3. **drop** - drops table 
 4. **create** - drops database schema and recreates tables
-5. **create-drop** - like create but will drop when shutting down aswell
+5. **create-drop** - like create but will drop when shutting down as well
 6. **validate** - validates the schema only
 7. **update** - updates the schema for changes in the JPA entities
 The tool should only be used for non prod environments

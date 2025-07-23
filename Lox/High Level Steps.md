@@ -1,5 +1,6 @@
 1. Lexing - tokenizing
 2. Parsing - building an Abstract Syntax Tree from the lexed tokens
+	1. as soon as the lexer finds a "string" it should create a String object with value "string"
 3. Static Analysis - at this point language specific features come into picture, for expressions like a + b we know we are +ing a and b but we dont know what the entails
 	1. we need to know what those variables are, can be done with binding or resolution
 	2. for each variable find out where the name is defined and wire the two together, taking care of scope

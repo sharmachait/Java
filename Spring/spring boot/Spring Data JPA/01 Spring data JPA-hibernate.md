@@ -41,6 +41,34 @@ public class Contact extends BaseEntity{
 	private Long contactId;
 }
 ```
+#### @Table annotation can be used to put the table in a specific schema when we have multiple schemas
+```java
+@Table(name="user_details", schema="onboarding")
+@Entity
+public class UserDetails{}
+```
+#### @Table annotation can be used to create multi column unique constraints kinda like for many to many subtable 
+```java
+@Table(name="user_details", 
+	schema="onboarding",
+	uniqueConstraints = {
+		@UniqueConstraint(columnNames={"phone","email"})
+	}
+)
+@Entity
+public class UserDetails{}
+```
+#### @Table Annotation allows us to make indexes as well
+```java
+@Table(name="user_details", 
+	indexes={
+		@Index(name="index_phone", columnList="phone"),
+		@Index(name="index_name_email", columnList="name,email")
+	}
+)
+@Entity
+public class UserDetails{}
+```
 ### how to make base entity columns part of model as well, use the annotation @MappedSuperClass
 ```java
 @Data
@@ -196,20 +224,28 @@ where 0 is the start index of the first page and 5 is the number of records per 
 the personPage will have at max 5 entries and meta data about the page, like total number of records, number of pages, current page number and if next page is available   
 we can expect the start and the field that is name from the @RequestParams anbd show content dynamically
 
-
-
-
 # composite primary keys and embedded fields
+1. the embeddable classes must be public
+2. must implement serializable 
+3. must have a no args constructor
+4.  and must override the equals and hashCode methods
 achieved via Embedded entities
 create a class OrderId.java and the columns in it will server as the primary key
 ```java
-@Data
+
 @AllArgsContructor
 @NoArgsConstructor
 @Embeddable
 public class OrderId implements Serializable {
-	private String username;
-	private LocalDateTime orderDate;
+	public String username;
+	public LocalDateTime orderDate;
+	@Override
+	public boolean equals(Object obj){
+		if(this==obj) return true;
+		if(!(obj instanceof OrderId)) return false;
+		OrderId id = (OrderId)obj;
+		return this.username.equals(id.username) && this.orderDate.equals(id.orderDate)
+	}
 }
 
 @Data

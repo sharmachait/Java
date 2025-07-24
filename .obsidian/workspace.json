@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "782ae3473fc05a7e",
+        "id": "3df0d2a6f84af625",
         "type": "tabs",
         "children": [
           {
-            "id": "cd81b4ab9e5a935b",
+            "id": "e514b3695c3a92f0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/spring boot/Spring Data JPA/02 hibernate jpa jdbc best practices.md",
+                "file": "Spring/spring boot/Spring Data JPA/01 Spring data JPA-hibernate.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02 hibernate jpa jdbc best practices"
-            }
-          },
-          {
-            "id": "a1bdf1ab82fa2a00",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spring/spring boot/Spring Data JPA/00 Components.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "00 Components"
+              "title": "01 Spring data JPA-hibernate"
             }
           }
         ]
@@ -67,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "create-dr",
+                "query": "@embedded",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -189,25 +175,30 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8e174e12d85b25c3",
+  "active": "e514b3695c3a92f0",
   "lastOpenFiles": [
-    "Spring/spring boot/Spring Data JPA/13. Entity relationships.md",
+    "Spring/spring boot/Spring Data JPA/Auditing.md",
     "Spring/spring boot/Spring Data JPA/02 hibernate jpa jdbc best practices.md",
+    "Spring/spring boot/Spring Data JPA/01 Spring data JPA-hibernate.md",
+    "Spring/JUnit and Mockito/06. Testing JPA entities.md",
+    "Lox/Visitor Pattern.md",
+    "Pasted image 20250724004700.png",
+    "Pasted image 20250724004633.png",
+    "Pasted image 20250724004617.png",
+    "Lox/High Level Steps.md",
+    "Lox/The Language Itself.md",
+    "Spring/spring boot/Spring Data JPA/13. Entity relationships.md",
     "Spring/spring boot/Spring Data JPA/00 Components.md",
     "Spring/spring boot/Spring Data JPA/@Async.md",
     "Spring/spring boot/Spring Data JPA/JPA Caching.md",
     "Spring/spring boot/grpc/01 Dependencies.md",
     "Pasted image 20250723092546.png",
     "Spring/spring boot/Spring Data JPA/Entity Inheritence.md",
-    "Spring/spring boot/Spring Data JPA/01 Spring data JPA-hibernate.md",
     "Spring/spring boot/Spring Data JPA/Custom Queries.md",
     "Spring/spring boot/Spring Data JPA/transactions/01. Transactions.md",
     "Spring/spring boot/Spring Data JPA/Custom Validation.md",
-    "Spring/spring boot/Spring Data JPA/Auditing.md",
     "Spring/spring boot/Spring Data JPA/Derived Queries.md",
     "Spring/Dependency Injection/06 Bean Scopes.md",
-    "Lox/High Level Steps.md",
-    "Lox/The Language Itself.md",
     "Java/01 Java for DSA.md",
     "Lox",
     "Spring/spring boot/Jdbc/05 DAO with hibernate.md",
@@ -217,8 +208,6 @@
     "Spring/spring boot/Jdbc/01. database connection.md",
     "Untitled.md",
     "Spring/spring boot/Spring Data JPA/Liquibase.md",
-    "Spring/spring boot/Spring Data JPA/DB LOCKS.md",
-    "Spring/spring boot/Spring Data JPA/13.2 Minimum requirement to create relationships.md",
     "Spring/spring boot/Jdbc",
     "Pasted image 20250719221149.png",
     "Pasted image 20250719161051.png",
@@ -229,13 +218,10 @@
     "Pasted image 20250707120803.png",
     "Java/Design Patterns",
     "Spring/spring boot/grpc",
-    "aws/Pasted image 20250623182156.png",
     "aws/Pasted image 20250623182156.png.crdownload",
     "Spring/spring boot/Security",
     "Spring/spring boot/Validation",
     "Spring/spring boot/Spring Data JPA",
-    "Pasted image 20250621161405.png",
-    "Pasted image 20250621155215.png",
     "Java"
   ]
 }

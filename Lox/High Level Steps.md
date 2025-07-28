@@ -41,3 +41,39 @@ Pipe means or
 () wrap an expression
 Things in Capitals are meta literals NUMBER is any number and STRING is string
 much like IDENTIFIER
+
+To be able to parse String to AST we need to define
+1. Precedence of operators
+2. Associativity
+   1. operators with same precedence are left associative
+   2. 5 - 3 - 1 is essentially (5 - 3) - 1
+   3. = is right associative
+   4. a = b = c is the same as a = (b = c)
+
+without these rules about precedence and associativity the grammar is ambiguous
+
+![img.png](img.png)
+the issue with the previous grammar is that
+binary → expression operator expression
+allows any expression on the sides without thinking of the precedence of the operator on either side
+there my be a a multiply on the side now the grammar is ambiguous
+with these rules we come up with a better grammar
+each precedence level should have a different rule
+expression should match anything
+since equality has the lowest precedence it matches equality
+a primary expression contains all the literals and grouping expressions.
+A unary expression starts with a unary operator followed by the operand. unary operators can nest
+since multiply and divide have left associativity the rule should recurse on the left side
+left recursion is hard to parse so we repeat the matching 0 or many times on the right
+same pattern is followed for all binary operators
+```cfg
+expression     → equality ;
+equality       → comparison ( ( "!=" | "==" ) comparison )* ;
+comparison     → term ( ( ">" | ">=" | "<" | "<=" ) term )* ;
+term           → factor ( ( "-" | "+" ) factor )* ;
+factor         → unary ( ( "/" | "*" ) unary )* ;
+unary          → ( "!" | "-" ) unary
+               | primary ;
+primary        → NUMBER | STRING | "true" | "false" | "nil"
+               | "(" expression ")" ;
+```

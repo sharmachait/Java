@@ -48,7 +48,7 @@ public class Student {
     private Set<Subject> subjects;
 }
 ```
-1. Manage the json back reference
+2. Manage the json back reference
 - `@JsonManagedReference` is placed on the _owning side_ (the one with `@JoinTable`). this entity will be serialized completely including the relationship
 - `@JsonBackReference` is placed on the _inverse side_ (the one mapped by the owning entity). this will not have the relationship when serialized
 ```java
@@ -116,7 +116,7 @@ but we should be very careful with this
 **orphan removal does not work for `@ManyToMany` relationships** because the child entity is usually shared between multiple parents
 
 ## N + 1 problem
-when working with lazy fetch if we are planning to loop over the Collection and get all the properties from the database any ways, tis better to do an eager fetch, otherwise it will run a query against the database for every iteration
+when working with lazy fetch if we are planning to loop over the Collection and get all the properties from the database any ways, its better to do an eager fetch, otherwise it will run a query against the database for every iteration
 
 if we ever find our selves doing something like this
 

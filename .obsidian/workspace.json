@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "3df0d2a6f84af625",
+        "id": "12733f152f4ca34d",
         "type": "tabs",
         "children": [
           {
-            "id": "e514b3695c3a92f0",
+            "id": "73e07c41e6ef4b07",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/spring boot/Spring Data JPA/13. Entity relationships.md",
+                "file": "Spring/spring boot/Spring Data JPA/SpecificationAPI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "13. Entity relationships"
-            }
-          },
-          {
-            "id": "fd3bad61a8c411bb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lox/Recursive Descent Parsing.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Recursive Descent Parsing"
+              "title": "SpecificationAPI"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -68,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "@embedded",
+                "query": "namedquery",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -190,41 +175,41 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fd3bad61a8c411bb",
+  "active": "73e07c41e6ef4b07",
   "lastOpenFiles": [
-    "Spring/spring boot/Spring Data JPA/13. Entity relationships.md",
+    "Spring/spring boot/Spring Data JPA/CriteriaAPI.md",
+    "Spring/spring boot/Spring Data JPA/SpecificationAPI.md",
     "Lox/Recursive Descent Parsing.md",
+    "Spring/spring boot/Spring Data JPA/Custom Queries JPQL NamedQuery NamedNativeQeury.md",
+    "Spring/spring boot/Spring Data JPA/03. Entity relationships.md",
+    "Spring/spring boot/Spring Data JPA/04 JPA inheritance.md",
+    "Spring/spring boot/Spring Data JPA/05 Minimum requirement to create relationships.md",
+    "Spring/spring boot/Spring Data JPA/Derived Queries.md",
+    "Spring/spring boot/Spring Data JPA/@Async.md",
+    "Spring/spring boot/Spring Data JPA/02 hibernate jpa jdbc best practices.md",
+    "Spring/spring boot/Spring Data JPA/01 Spring data JPA-hibernate.md",
+    "Spring/spring boot/16. JSON serialization.md",
     "Lox/High Level Steps.md",
     "img.png",
     "Unconfirmed 95679.crdownload",
     "Lox/The Language Itself.md",
-    "Spring/spring boot/Spring Data JPA/01 Spring data JPA-hibernate.md",
     "Spring/spring boot/Spring Data JPA/Auditing.md",
-    "Spring/spring boot/Spring Data JPA/02 hibernate jpa jdbc best practices.md",
     "Spring/JUnit and Mockito/06. Testing JPA entities.md",
     "Lox/Visitor Pattern.md",
     "Pasted image 20250724004700.png",
     "Pasted image 20250724004633.png",
     "Pasted image 20250724004617.png",
     "Spring/spring boot/Spring Data JPA/00 Components.md",
-    "Spring/spring boot/Spring Data JPA/@Async.md",
     "Spring/spring boot/Spring Data JPA/JPA Caching.md",
     "Spring/spring boot/grpc/01 Dependencies.md",
     "Pasted image 20250723092546.png",
     "Spring/spring boot/Spring Data JPA/Entity Inheritence.md",
-    "Spring/spring boot/Spring Data JPA/Custom Queries.md",
     "Spring/spring boot/Spring Data JPA/transactions/01. Transactions.md",
     "Spring/spring boot/Spring Data JPA/Custom Validation.md",
-    "Spring/spring boot/Spring Data JPA/Derived Queries.md",
     "Spring/Dependency Injection/06 Bean Scopes.md",
     "Java/01 Java for DSA.md",
     "Lox",
     "Spring/spring boot/Jdbc/05 DAO with hibernate.md",
-    "Spring/spring boot/Jdbc/04 DAO with jdbc template.md",
-    "Spring/spring boot/Jdbc/03 DAO pattern with jdbc.md",
-    "Spring/spring boot/Jdbc/02. H2 database and JDBC.md",
-    "Spring/spring boot/Jdbc/01. database connection.md",
-    "Untitled.md",
     "Spring/spring boot/Jdbc",
     "Pasted image 20250719221149.png",
     "Pasted image 20250719161051.png",

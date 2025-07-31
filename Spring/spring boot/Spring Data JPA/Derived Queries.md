@@ -32,3 +32,43 @@ readBy getBy and findBy are equivalent
 ![[Pasted image 20241002143707.png]]
 ![[Pasted image 20241002144014.png]]
 ![[Pasted image 20241002144050.png]]
+
+## Nested Objects
+```java
+@Entity
+public class Person {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Address address;
+
+    // Getters and setters
+}
+@Entity
+public class Address {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String street;
+    private String city;
+    private String zipCode;
+
+    // Getters and setters
+}
+public interface PersonRepository extends JpaRepository<Person, Long> {
+
+    // This method will find all Person entities that have an Address with the specified city.
+    List<Person> findByAddressCity(String city);
+
+    // You can also combine conditions
+    List<Person> findByNameAndAddressCity(String name, String city);
+
+    // To avoid ambiguity with property names, you can also use an underscore
+    // to separate the properties, though this is less common for simple traversals.
+    List<Person> findByAddress_City(String city);
+}
+
+```

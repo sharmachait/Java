@@ -1,0 +1,1 @@
+Criteria has a lot of boiler plate and duplication of code

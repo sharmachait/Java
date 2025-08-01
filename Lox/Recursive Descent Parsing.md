@@ -66,13 +66,13 @@ assignment    → equality ;
 ```
 
 
-|  Lox Type        |  Java Representation  |
-| ---------------- | --------------------- |
-|  Any Lox value   |  Object               |
-|  nil             |  null                 |
-|  Boolean         |  Boolean              |
-|  number          |  Double               |
-|  string          |  String               |
+| Lox Type      | Java Representation |
+| ------------- | ------------------- |
+| Any Lox value | Object              |
+| nil           | null                |
+| Boolean       | Boolean             |
+| number        | Double              |
+| string        | String              |
 
 We use Java's Object because Lox is Dynamically typed while java is not 
 

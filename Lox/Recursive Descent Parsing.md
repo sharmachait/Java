@@ -81,3 +81,31 @@ To determine what data type we are working on we can use instanceof�
 A literal always appears somewhere in the user’s source code. 
 Lots of values are produced by computation and don’t exist anywhere in the code itself. Those aren’t literals. 
 A literal comes from the parser’s domain. Values are an interpreter concept, part of the runtime’s world.
+
+#### scoping
+1. Lexical Scope - we can identify the scope just by statically reading the code
+```java
+{
+	var a=1;
+}
+{
+	var a=2;
+}
+```
+2. Dynamic scope - we can tell what variable is being referred to before running the code, methods and fields are dynamically scoped
+```java
+class Saxophone{
+	play(){
+		print "Careless Whisper";
+	}
+}
+class GolfClub{
+	play(){
+		print "Fore!";
+	}
+}
+
+fun playIt(thing){
+	thing.play();
+}
+```

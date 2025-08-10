@@ -1,5 +1,6 @@
 scanf needs the address of the variable to be passed int which we can do with `&` ampersand 
 ```c
+#include <stdio.h>  
 int main() {  
     int a=0;  
     float b=0.0;  
@@ -32,6 +33,8 @@ wont work if we want to read an empty space potentially
 best way is to use getchar() to consume the left over new line
 
 ```c
+#include <stdio.h>  
+
 int main() {  
     int a=0;  
     float b=0.0;  
@@ -63,8 +66,8 @@ fgets does clean up the new line after itself (matter of fact we have that new l
 
 but only if there is enough space in the name char array for it
 
-
 ```c
+#include <stdio.h>  
 int main() {  
     char c='\0';  
     char d[2]="";  
@@ -79,6 +82,7 @@ int main() {
 this works only only if we enter a single character for name if we enter 2 and then press enter it will put that new line character into the variable c
 
 ```c
+#include <stdio.h>  
 int main() {  
     char c='\0';  
     char d[2]="";  
@@ -103,7 +107,7 @@ s
 s
 ```
 
-fgets also requires a `getchar()` before itself we there is an new line character in the buffer from the previous user input
+fgets also requires a `getchar()` before itself when there is an new line character in the buffer from the previous user input
 
 we can clear the new line character from 
 `fgets(name, sizeof(name), stdin)`
@@ -111,7 +115,11 @@ the name variable in by setting it to '\0'
 
 but to do it we need to know the length of the string and for that we will include the string header file to perform string functions
 it gives us functions like `strlen()` 
+
+but to be able to sue it we need to include the string.h header
 ```c
+#include <string.h>
+
 fgets(name, sizeof(name), stdin);
 name[strlen(name) - 1] = '\0';
 ```

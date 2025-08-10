@@ -20,7 +20,7 @@ false;
 "I am a string";
 "";
 ```
-4. Nil
+4. Nil `nil`
 ### Expressions
 ```js
 add + me;
@@ -34,7 +34,7 @@ lessThan <= orEqual;
 greater > than;
 greaterThan >= orEqual;
 1 == 2;         // false.
-"cat" != "dog"; // true.
+"cat" != "dog"; // true. 
 123 == "123"; // false.
 !true;  // false.
 !false; // true.

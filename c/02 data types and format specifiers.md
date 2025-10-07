@@ -11,7 +11,7 @@ printf("%s\n", name);
 char name[4]; // string of size 4 only allowed
 ```
 - booleans - format specifier `%d`
-	- require including a header file
+	- require including a header file called stdbool.h
 ```c
 #include <stdio.h>
 #include <stdbool.h>

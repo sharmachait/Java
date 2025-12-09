@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "203fdee4028ead23",
+        "id": "06fed56d38a52afb",
         "type": "tabs",
         "children": [
           {
-            "id": "1dfcccb6eb4790d2",
+            "id": "c23a78a51b2f0ce7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spring/spring boot/Spring Data JPA/Liquibase.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Liquibase"
+              "title": "New tab"
             }
           }
         ]
@@ -53,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "cdk deploy",
+                "query": "script",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -176,8 +172,31 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1dfcccb6eb4790d2",
+  "active": "c23a78a51b2f0ce7",
   "lastOpenFiles": [
+    "project-overview-section-1.png",
+    "debugger script.md",
+    "aws/compute/00 EC2.md",
+    "Pasted image 20251123142953.png",
+    "aws/compute/Untitled.md",
+    "Pasted image 20251117234524.png",
+    "Pasted image 20251116153944.png",
+    "Pasted image 20251116221010.png",
+    "Pasted image 20251116220759.png",
+    "Pasted image 20251116220647.png",
+    "Pasted image 20251116215853.png",
+    "Spring/spring boot/grpc/05 interceptors.md",
+    "aws/00 basics.md",
+    "aws/03 Billing and Cost management.md",
+    "Pasted image 20251116144607.png",
+    "Untitled 1.md",
+    "aws/01 IAM.md",
+    "Pasted image 20251116143210.png",
+    "Pasted image 20251115204921.png",
+    "aws/02 CLI and Access keys.md",
+    "aws/Untitled",
+    "Lox/script.md",
+    "Spring/spring boot/Spring Data JPA/Liquibase.md",
     "Spring/spring boot/Spring Data JPA/JPA Caching.md",
     "Spring/spring boot/Spring Data JPA/Entity Inheritence.md",
     "Spring/spring boot/Spring Data JPA/Derived Queries.md",
@@ -192,37 +211,14 @@
     "Spring/spring boot/18.1 Logging.md",
     "Spring/spring boot/19. OAUTH.md",
     "Spring/spring boot/20. security setup steps.md",
-    "aws/cdk/07 Multiple Stacks and sharing data.md",
-    "aws/cdk/08. Aspects.md",
-    "aws/cdk/06 Intrinsic Functions.md",
-    "aws/cdk/05 CDK IDs.md",
-    "aws/cdk/04 cleanup.md",
-    "aws/cdk/03 parameters.md",
-    "aws/cdk/02. Creating S3.md",
-    "aws/cdk/01. CLI, CDK and CloudFormation.md",
-    "Lox/script.md",
-    "Pasted image 20250923005812.png",
-    "Pasted image 20250923004028.png",
-    "Pasted image 20250922235704.png",
-    "Pasted image 20250922012909.png",
-    "Untitled.md",
-    "Untitled 1.md",
-    "Pasted image 20250921184934.png",
-    "aws/serverless/API gateway.md",
     "aws/cdk",
-    "Pasted image 20250909003901.png",
-    "Pasted image 20250907230458.png",
     "aws/serverless",
-    "Pasted image 20240916234013.png",
-    "Pasted image 20250825221600.png",
     "c",
-    "img.png",
     "Unconfirmed 95679.crdownload",
     "Lox",
     "Spring/spring boot/Jdbc",
     "Spring/spring boot/Spring Data JPA/transactions",
     "Java/Design Patterns",
-    "Spring/spring boot/grpc",
-    "aws/Pasted image 20250623182156.png.crdownload"
+    "Spring/spring boot/grpc"
   ]
 }

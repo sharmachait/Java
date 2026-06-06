@@ -22,18 +22,6 @@
             }
           },
           {
-            "id": "506fceaa2a2cd716",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "{0AD4CAC0-EE86-4280-896C-14CB139F15A0}.png"
-              },
-              "icon": "lucide-image",
-              "title": "{0AD4CAC0-EE86-4280-896C-14CB139F15A0}"
-            }
-          },
-          {
             "id": "134a8c2ac602a036",
             "type": "leaf",
             "state": {
@@ -203,8 +191,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "506fceaa2a2cd716",
+  "active": "8e174e12d85b25c3",
   "lastOpenFiles": [
+    "Remove-UnreferencedPngs.ps1",
     "System Design/Google Docs.md",
     "{0AD4CAC0-EE86-4280-896C-14CB139F15A0}.png",
     "System Design/Bitly.md",

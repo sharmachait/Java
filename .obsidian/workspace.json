@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "bac0b6e26850ea87",
+        "id": "93b23f63ec6dca2e",
         "type": "tabs",
         "children": [
           {
-            "id": "fb7f732b7291e806",
+            "id": "8dd3a409480ffec8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "script.md",
+                "file": "Spring/spring boot/05.01 Spring Profiles.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "script"
-            }
-          },
-          {
-            "id": "134a8c2ac602a036",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java/01 Java for DSA.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "01 Java for DSA"
+              "title": "05.01 Spring Profiles"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -56,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -181,37 +168,42 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "8e174e12d85b25c3",
+  "active": "8dd3a409480ffec8",
   "lastOpenFiles": [
+    "Spring/Dependency Injection/01 Object registration in application context.md",
+    "LLD",
+    "{1D7290E4-A88B-4D73-A5F2-9C41FAB6F344}.png",
+    "{0BD272AB-A653-4C6C-932B-1FB5A66DD218}.png",
+    "script.md",
+    "{16A0DAD6-C2CF-40EB-8E48-F75F730F1520}.png",
+    "{689A76B0-E72F-4A74-A15D-1B93F95BE0BC}.png",
+    "{25ACDE10-88C2-4EFA-B568-98F53FBD5073}.png",
+    "{DE6B808A-C2AE-4C44-BF2D-174CAD97047D}.png",
+    "{37EBC651-6CF2-4816-A265-390A7A5A561F}.png",
+    "{5BDE9741-46AE-45A3-BDFF-5134FD8C1F17}.png",
+    "{3EA0CE1D-1588-445A-B4B4-683248D30AB4}.png",
+    "{953F012E-F95A-49D4-BEE9-DC2F9BE37932}.png",
+    "Java/01 Java for DSA.md",
+    "kubernetes/0000. Vim + shell + kubectl shortcuts.md",
+    "broken-references.csv",
+    "Find-BrokenReferences.ps1",
     "Remove-UnreferencedPngs.ps1",
     "System Design/Google Docs.md",
-    "{0AD4CAC0-EE86-4280-896C-14CB139F15A0}.png",
     "System Design/Bitly.md",
     "Saga + Clean + DDD +CQRS/Saga.md",
     "Saga + Clean + DDD +CQRS/Kafka.md",
-    "image.png",
-    "img.png",
-    "script.md",
     "redis script.md",
-    "project-overview-section-1.png",
     "changes.md",
-    "{3AE0107A-4D6E-4D47-A4C5-8CA99B41EA4E}.png",
-    "{9B785B15-E6C2-485E-ABB7-BF52E5BF4F50}.png",
-    "{9BB77316-B0D1-492E-B557-0F8F3BB49ED0}.png",
-    "{66EFFF6D-63F6-41CF-AE51-87B922593CC4}.png",
-    "{615936F2-2830-4807-B48C-B93B6512C33D}.png",
-    "{16E1F316-6998-47CA-829F-85FDF3AFF65A}.png",
-    "Java/01 Java for DSA.md",
     "Java/02 Functional interfaces.md",
     "aws/03 Billing and Cost management.md",
     "aws/02 CLI and Access keys.md",
@@ -229,15 +221,10 @@
     "Spring/spring boot/Spring Data JPA/Entity Inheritence.md",
     "Spring/spring boot/Spring Data JPA/Derived Queries.md",
     "Spring/spring boot/Spring Data JPA/DB LOCKS.md",
-    "Spring/spring boot/Spring Data JPA/CriteriaAPI.md",
     "aws/cdk",
     "aws/serverless",
     "c",
     "Unconfirmed 95679.crdownload",
-    "Lox",
-    "Spring/spring boot/Jdbc",
-    "Spring/spring boot/Spring Data JPA/transactions",
-    "Java/Design Patterns",
-    "Spring/spring boot/grpc"
+    "Lox"
   ]
 }
